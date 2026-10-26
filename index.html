@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>TÁNGANA · Havana Streets 0.2</title><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0b0d12;color:white;font-family:system-ui;touch-action:none}canvas{width:100vw;height:100dvh;display:block;image-rendering:pixelated}#label{position:fixed;top:env(safe-area-inset-top,0px);left:12px;background:#10131acc;border:1px solid #fff6;padding:9px 12px;font-weight:800;letter-spacing:.08em}#help{position:fixed;top:53px;left:12px;font-size:12px;color:#e6e6e6;background:#10131a99;padding:5px}#pad{position:fixed;bottom:32px;left:20px;width:138px;height:138px;border:3px solid #ffffff9c;border-radius:50%;background:#ffffff1c;touch-action:none}#nub{position:absolute;width:60px;height:60px;left:36px;top:36px;background:#f4ead4c9;border-radius:50%;box-shadow:0 0 0 2px #1117}#turn{position:fixed;right:18px;bottom:44px;width:155px;height:122px;border:2px solid #ffffff7d;border-radius:18px;background:#ffffff1c;display:grid;place-items:center;text-align:center;font-size:15px;font-weight:700;touch-action:none}#reset{position:fixed;right:14px;top:15px;background:#151922;color:#fff;border:1px solid #fff7;padding:10px 13px;border-radius:8px}#status{position:fixed;bottom:6px;left:0;right:0;text-align:center;font-size:11px;opacity:.8;pointer-events:none}</style></head><body><canvas id="view"></canvas><div id="label">TÁNGANA · 0.2</div><div id="help">Havana test district · explore the streets</div><button id="reset">RESET</button><div id="pad"><div id="nub"></div></div><div id="turn">DRAG TO TURN<br>↔</div><div id="status">Havana district · Environment test · No enemies</div><script>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>TÁNGANA · Target Practice 0.3</title><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0b0d12;color:white;font-family:system-ui;touch-action:none}canvas{width:100vw;height:100dvh;display:block;image-rendering:pixelated}#label{position:fixed;top:env(safe-area-inset-top,0px);left:12px;background:#10131acc;border:1px solid #fff6;padding:9px 12px;font-weight:800;letter-spacing:.08em}#help{position:fixed;top:53px;left:12px;font-size:12px;color:#e6e6e6;background:#10131a99;padding:5px}#pad{position:fixed;bottom:32px;left:20px;width:138px;height:138px;border:3px solid #ffffff9c;border-radius:50%;background:#ffffff1c;touch-action:none}#nub{position:absolute;width:60px;height:60px;left:36px;top:36px;background:#f4ead4c9;border-radius:50%;box-shadow:0 0 0 2px #1117}#turn{position:fixed;right:18px;bottom:44px;width:155px;height:122px;border:2px solid #ffffff7d;border-radius:18px;background:#ffffff1c;display:grid;place-items:center;text-align:center;font-size:15px;font-weight:700;touch-action:none}#fire{position:fixed;right:34px;bottom:190px;width:88px;height:88px;border-radius:50%;background:#ba4036e8;color:#fff;border:3px solid #fff9;font-weight:900;font-size:19px;touch-action:none}#score{position:fixed;top:92px;left:12px;background:#10131acc;padding:6px 10px;font-weight:700}#reset{position:fixed;right:14px;top:15px;background:#151922;color:#fff;border:1px solid #fff7;padding:10px 13px;border-radius:8px}#status{position:fixed;bottom:6px;left:0;right:0;text-align:center;font-size:11px;opacity:.8;pointer-events:none}</style></head><body><canvas id="view"></canvas><div id="label">TÁNGANA · 0.3</div><div id="help">Target practice · aim and fire</div><button id="reset">RESET</button><div id="score">HITS 0 / 5</div><button id="fire" aria-label="Fire">FIRE</button><div id="pad"><div id="nub"></div></div><div id="turn">DRAG TO TURN<br>↔</div><div id="status">Target practice · stationary targets · no enemies</div><script>
 'use strict';
 const canvas=document.getElementById('view'),ctx=canvas.getContext('2d',{alpha:false});
 const level=[
@@ -23,6 +23,8 @@ const level=[
 '100000000000000000000001',
 '111111111111111111111111'
 ];
+const targets=[{x:10.5,y:6.5},{x:7.5,y:9.5},{x:14.5,y:10.5},{x:11.5,y:14.5},{x:17.5,y:8.5}].map(t=>({...t,alive:true}));
+let shots=0,hits=0,flashUntil=0,hitUntil=0;
 const player={x:10.5,y:10.5,a:-.4};const keys=new Set();let joyX=0,joyY=0,turnV=0;
 function solid(x,y){let xi=Math.floor(x),yi=Math.floor(y);return yi<0||yi>=level.length||xi<0||xi>=level[0].length||level[yi][xi]!=='0'}
 function move(dx,dy){let r=.22;if(!solid(player.x+dx+Math.sign(dx)*r,player.y))player.x+=dx;if(!solid(player.x,player.y+dy+Math.sign(dy)*r))player.y+=dy}
@@ -31,7 +33,7 @@ function render(){
  // Sky and pavement are drawn separately from the raycast walls.
  const sky=ctx.createLinearGradient(0,0,0,h/2);sky.addColorStop(0,'#78b7d5');sky.addColorStop(1,'#d6d4c5');ctx.fillStyle=sky;ctx.fillRect(0,0,w,h/2);
  ctx.fillStyle='#8b8073';ctx.fillRect(0,h/2,w,h/2);
- const fov=Math.PI/2.85,columns=Math.min(w,480),colW=w/columns;
+ const fov=Math.PI/2.85,columns=Math.min(w,480),colW=w/columns; const depth=new Float32Array(columns);
  for(let i=0;i<columns;i++){
   const angle=player.a+Math.atan((2*i/columns-1)*Math.tan(fov/2)),dx=Math.cos(angle),dy=Math.sin(angle);
   let mapX=Math.floor(player.x),mapY=Math.floor(player.y);
@@ -42,7 +44,7 @@ function render(){
    if(solid(mapX+.5,mapY+.5))break;
   }
   const distance=Math.max(.08,side===0?distX-ddx:distY-ddy),corrected=Math.max(.08,distance*Math.cos(angle-player.a));
-  const wallHeight=Math.min(h*3,h/(corrected*.78)),top=(h-wallHeight)/2;
+  depth[i]=corrected;const wallHeight=Math.min(h*3,h/(corrected*.78)),top=(h-wallHeight)/2;
   const tile=level[mapY]?.[mapX]||'1',hit=side===0?player.y+distance*dy:player.x+distance*dx,textureX=hit-Math.floor(hit);
   const colors={'1':[188,171,145],'2':[232,174,104],'3':[113,181,176],'4':[211,130,122],'5':[174,166,203]};
   const base=colors[tile]||colors['1'];
@@ -64,11 +66,44 @@ function render(){
   if(mortar){ctx.fillStyle='rgba(65,52,44,.18)';ctx.fillRect(x,top,cw,wallHeight)}
   ctx.fillStyle='#554c42';ctx.fillRect(x,top,cw,Math.max(1,h*.003));
  }
+ // Draw targets back-to-front, clipped by the wall depth buffer.
+ const focal=w/(2*Math.tan(fov/2));
+ for(const t of targets.filter(t=>t.alive).sort((a,b)=>Math.hypot(b.x-player.x,b.y-player.y)-Math.hypot(a.x-player.x,a.y-player.y))){
+  const dx=t.x-player.x,dy=t.y-player.y;
+  const front=dx*Math.cos(player.a)+dy*Math.sin(player.a);
+  const lateral=-dx*Math.sin(player.a)+dy*Math.cos(player.a);
+  if(front<=.15)continue;
+  const center=w/2+lateral/front*focal;
+  const size=Math.min(h*2,h/(front*.78)*.53);
+  const left=center-size/2,top=h/2-size*.42;
+  for(let px=Math.max(0,Math.floor(left));px<Math.min(w,Math.ceil(left+size));px+=Math.max(1,Math.ceil(w/columns))){
+   const column=Math.min(columns-1,Math.floor(px/w*columns));
+   if(front>depth[column]+.08)continue;
+   const u=(px-left)/size;
+   if(u<.08||u>.92)continue;
+   const halfWidth=Math.sqrt(Math.max(0,1-Math.pow((u-.5)/.42,2)));
+   ctx.fillStyle='#242b32';ctx.fillRect(px,top+size*(.5-.42*halfWidth),Math.ceil(w/columns)+1,size*.84*halfWidth);
+   const inner=Math.sqrt(Math.max(0,1-Math.pow((u-.5)/.34,2)));
+   if(inner>0){ctx.fillStyle='#f1cf85';ctx.fillRect(px,top+size*(.5-.34*inner),Math.ceil(w/columns)+1,size*.68*inner)}
+   const bull=Math.sqrt(Math.max(0,1-Math.pow((u-.5)/.13,2)));
+   if(bull>0){ctx.fillStyle='#b63832';ctx.fillRect(px,top+size*(.5-.13*bull),Math.ceil(w/columns)+1,size*.26*bull)}
+  }
+ }
+ if(performance.now()<flashUntil){ctx.fillStyle='#ffe3a444';ctx.fillRect(0,0,w,h);ctx.fillStyle='#ffe2a0';ctx.beginPath();ctx.arc(w/2,h/2,17,0,Math.PI*2);ctx.fill()}
+ if(performance.now()<hitUntil){ctx.strokeStyle='#7eff9c';ctx.lineWidth=5;ctx.strokeRect(w/2-17,h/2-17,34,34)}
  // Simple centered reticle, not a weapon.
  ctx.strokeStyle='#ffffffd0';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(w/2-8,h/2);ctx.lineTo(w/2+8,h/2);ctx.moveTo(w/2,h/2-8);ctx.lineTo(w/2,h/2+8);ctx.stroke();
 }
 function resize(){let scale=Math.min(devicePixelRatio||1,1.5);canvas.width=Math.max(320,Math.floor(innerWidth*scale));canvas.height=Math.max(400,Math.floor(innerHeight*scale));render()}addEventListener('resize',resize);resize();
-addEventListener('keydown',e=>{keys.add(e.code);if(['Space','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code))e.preventDefault()});addEventListener('keyup',e=>keys.delete(e.code));document.getElementById('reset').onclick=()=>Object.assign(player,{x:10.5,y:10.5,a:-.4});
+addEventListener('keydown',e=>{keys.add(e.code);if(e.code==='Space'&&!e.repeat)fire();if(['Space','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code))e.preventDefault()});addEventListener('keyup',e=>keys.delete(e.code));function wallDistance(angle){let x=player.x,y=player.y,dx=Math.cos(angle),dy=Math.sin(angle);for(let d=0;d<30;d+=.035){if(solid(x+dx*d,y+dy*d))return d}return 30}
+function fire(){shots++;flashUntil=performance.now()+95;const wall=wallDistance(player.a);let chosen=null,best=Infinity;
+ for(const t of targets){if(!t.alive)continue;const dx=t.x-player.x,dy=t.y-player.y;const front=dx*Math.cos(player.a)+dy*Math.sin(player.a),lateral=Math.abs(-dx*Math.sin(player.a)+dy*Math.cos(player.a));if(front>.15&&front<wall+.1&&lateral<.24&&front<best){chosen=t;best=front}}
+ if(chosen){chosen.alive=false;hits++;hitUntil=performance.now()+220}
+ document.getElementById('score').textContent=`HITS ${hits} / ${targets.length} · SHOTS ${shots}`;
+ if(hits===targets.length)document.getElementById('help').textContent='All targets hit! Tap RESET to retry.';
+}
+document.getElementById('fire').addEventListener('pointerdown',e=>{e.preventDefault();fire()});
+document.getElementById('reset').onclick=()=>{Object.assign(player,{x:10.5,y:10.5,a:-.4});targets.forEach(t=>t.alive=true);shots=hits=0;document.getElementById('score').textContent='HITS 0 / 5';document.getElementById('help').textContent='Target practice · aim and fire'};
 const pad=document.getElementById('pad'),nub=document.getElementById('nub');function padUpdate(e){const b=pad.getBoundingClientRect(),cx=b.left+b.width/2,cy=b.top+b.height/2;let x=(e.clientX-cx)/50,y=(e.clientY-cy)/50,len=Math.max(1,Math.hypot(x,y));joyX=x/len;joyY=y/len;nub.style.transform=`translate(${joyX*36}px,${joyY*36}px)`}pad.addEventListener('pointerdown',e=>{pad.setPointerCapture(e.pointerId);padUpdate(e)});pad.addEventListener('pointermove',e=>{if(pad.hasPointerCapture(e.pointerId))padUpdate(e)});function stopPad(){joyX=joyY=0;nub.style.transform=''}pad.addEventListener('pointerup',stopPad);pad.addEventListener('pointercancel',stopPad);
 const turn=document.getElementById('turn');let lastX=null;turn.addEventListener('pointerdown',e=>{turn.setPointerCapture(e.pointerId);lastX=e.clientX});turn.addEventListener('pointermove',e=>{if(turn.hasPointerCapture(e.pointerId)&&lastX!==null){player.a+=(e.clientX-lastX)*.012;lastX=e.clientX}});turn.addEventListener('pointerup',()=>lastX=null);turn.addEventListener('pointercancel',()=>lastX=null);
 let last=performance.now();function frame(now){let dt=Math.min(.04,(now-last)/1000);last=now;let forward=(keys.has('KeyW')||keys.has('ArrowUp')?1:0)-(keys.has('KeyS')||keys.has('ArrowDown')?1:0)-joyY;let strafe=(keys.has('KeyD')?1:0)-(keys.has('KeyA')?1:0)+joyX;let mag=Math.max(1,Math.hypot(forward,strafe));forward/=mag;strafe/=mag;player.a+=((keys.has('ArrowRight')?1:0)-(keys.has('ArrowLeft')?1:0))*dt*2.2;let speed=dt*2.6;move((Math.cos(player.a)*forward-Math.sin(player.a)*strafe)*speed,(Math.sin(player.a)*forward+Math.cos(player.a)*strafe)*speed);render();requestAnimationFrame(frame)}requestAnimationFrame(frame);
