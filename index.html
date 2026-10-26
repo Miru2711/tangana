@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>TÁNGANA · Havana Cartoon 0.7</title><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0b0d12;color:white;font-family:system-ui;touch-action:none}canvas{width:100vw;height:100dvh;display:block;image-rendering:pixelated}#label{position:fixed;top:env(safe-area-inset-top,0px);left:12px;background:#10131acc;border:1px solid #fff6;padding:9px 12px;font-weight:800;letter-spacing:.08em}#help{position:fixed;top:53px;left:12px;font-size:12px;color:#e6e6e6;background:#10131a99;padding:5px}#pad{position:fixed;bottom:32px;left:20px;width:138px;height:138px;border:3px solid #ffffff9c;border-radius:50%;background:#ffffff1c;touch-action:none}#nub{position:absolute;width:60px;height:60px;left:36px;top:36px;background:#f4ead4c9;border-radius:50%;box-shadow:0 0 0 2px #1117}#turn{position:fixed;right:18px;bottom:44px;width:155px;height:122px;border:2px solid #ffffff7d;border-radius:18px;background:#ffffff1c;display:grid;place-items:center;text-align:center;font-size:15px;font-weight:700;touch-action:none}#fire{position:fixed;right:34px;bottom:190px;width:88px;height:88px;border-radius:50%;background:#ba4036e8;color:#fff;border:3px solid #fff9;font-weight:900;font-size:19px;touch-action:none}#score{position:fixed;top:92px;left:12px;background:#10131acc;padding:6px 10px;font-weight:700}#reset{position:fixed;right:14px;top:15px;background:#151922;color:#fff;border:1px solid #fff7;padding:10px 13px;border-radius:8px}#status{position:fixed;bottom:6px;left:0;right:0;text-align:center;font-size:11px;opacity:.8;pointer-events:none}#weapons{position:fixed;left:12px;bottom:184px;display:flex;gap:6px;z-index:3}#weapons button{background:#111b25d9;border:2px solid #ffffff85;border-radius:9px;color:white;font-size:12px;font-weight:800;padding:10px 8px;min-height:44px}#weapons button.selected{border-color:#ffe4a2;background:#6c3d20}#effect{position:fixed;top:29%;left:0;right:0;text-align:center;pointer-events:none;font-size:clamp(28px,8vw,60px);font-weight:1000;color:#fff2aa;text-shadow:3px 4px #402017;opacity:0}#effect.on{opacity:1}</style></head><body><canvas id="view"></canvas><div id="label">TÁNGANA · 0.7</div><div id="help">Survive the patrol · aim and fire</div><button id="reset">RESET</button><div id="score">HP 100 · KOs 0 / 4</div><div id="weapons"><button data-weapon="machete" class="selected">1 MACHETE</button><button data-weapon="revolver">2 REVOLVER</button><button data-weapon="cannon">3 CANNON</button></div><div id="effect"></div><button id="fire" aria-label="Fire">FIRE</button><div id="pad"><div id="nub"></div></div><div id="turn">DRAG TO TURN<br>↔</div><div id="status">Havana cartoon study 0.7 · original procedural art</div><script>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>TÁNGANA · Havana Illustrated Havana 0.8</title><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0b0d12;color:white;font-family:system-ui;touch-action:none}canvas{width:100vw;height:100dvh;display:block;image-rendering:pixelated}#label{position:fixed;top:env(safe-area-inset-top,0px);left:12px;background:#10131acc;border:1px solid #fff6;padding:9px 12px;font-weight:800;letter-spacing:.08em}#help{position:fixed;top:53px;left:12px;font-size:12px;color:#e6e6e6;background:#10131a99;padding:5px}#pad{position:fixed;bottom:32px;left:20px;width:138px;height:138px;border:3px solid #ffffff9c;border-radius:50%;background:#ffffff1c;touch-action:none}#nub{position:absolute;width:60px;height:60px;left:36px;top:36px;background:#f4ead4c9;border-radius:50%;box-shadow:0 0 0 2px #1117}#turn{position:fixed;right:18px;bottom:44px;width:155px;height:122px;border:2px solid #ffffff7d;border-radius:18px;background:#ffffff1c;display:grid;place-items:center;text-align:center;font-size:15px;font-weight:700;touch-action:none}#fire{position:fixed;right:34px;bottom:190px;width:88px;height:88px;border-radius:50%;background:#ba4036e8;color:#fff;border:3px solid #fff9;font-weight:900;font-size:19px;touch-action:none}#score{position:fixed;top:92px;left:12px;background:#10131acc;padding:6px 10px;font-weight:700}#reset{position:fixed;right:14px;top:15px;background:#151922;color:#fff;border:1px solid #fff7;padding:10px 13px;border-radius:8px}#status{position:fixed;bottom:6px;left:0;right:0;text-align:center;font-size:11px;opacity:.8;pointer-events:none}#weapons{position:fixed;left:12px;bottom:184px;display:flex;gap:6px;z-index:3}#weapons button{background:#111b25d9;border:2px solid #ffffff85;border-radius:9px;color:white;font-size:12px;font-weight:800;padding:10px 8px;min-height:44px}#weapons button.selected{border-color:#ffe4a2;background:#6c3d20}#effect{position:fixed;top:29%;left:0;right:0;text-align:center;pointer-events:none;font-size:clamp(28px,8vw,60px);font-weight:1000;color:#fff2aa;text-shadow:3px 4px #402017;opacity:0}#effect.on{opacity:1}</style></head><body><canvas id="view"></canvas><div id="label">TÁNGANA · 0.8</div><div id="help">Survive the patrol · aim and fire</div><button id="reset">RESET</button><div id="score">HP 100 · KOs 0 / 4</div><div id="weapons"><button data-weapon="machete" class="selected">1 MACHETE</button><button data-weapon="revolver">2 REVOLVER</button><button data-weapon="cannon">3 CANNON</button></div><div id="effect"></div><button id="fire" aria-label="Fire">FIRE</button><div id="pad"><div id="nub"></div></div><div id="turn">DRAG TO TURN<br>↔</div><div id="status">Havana illustrated façade test 0.8 · original canvas artwork</div><script>
 'use strict';
 const canvas=document.getElementById('view'),ctx=canvas.getContext('2d',{alpha:false});
 const level=[
@@ -32,6 +32,42 @@ let shots=0,hits=0,flashUntil=0,hitUntil=0,weapon='machete',ammo=6,lastAttack=0,
 const player={x:10.5,y:10.5,a:-.4};const keys=new Set();let joyX=0,joyY=0,turnV=0;
 function solid(x,y){let xi=Math.floor(x),yi=Math.floor(y);return yi<0||yi>=level.length||xi<0||xi>=level[0].length||level[yi][xi]!=='0'}
 function move(dx,dy){let r=.22;if(!solid(player.x+dx+Math.sign(dx)*r,player.y))player.x+=dx;if(!solid(player.x,player.y+dy+Math.sign(dy)*r))player.y+=dy}
+
+// Original illustrated façade study informed by Old Havana architectural references.
+// Canvas artwork is drawn locally; no third-party photos are embedded.
+function makeHavanaFacade(){
+ const c=document.createElement('canvas');c.width=256;c.height=512;
+ const p=c.getContext('2d');
+ const wall=p.createLinearGradient(0,0,256,512);wall.addColorStop(0,'#e7b86d');wall.addColorStop(.5,'#f3c982');wall.addColorStop(1,'#d99861');
+ p.fillStyle=wall;p.fillRect(0,0,256,512);
+ // deterministic weathered plaster brush marks
+ for(let i=0;i<850;i++){let x=(i*97+13)%256,y=(i*193+17)%512;
+ p.fillStyle=i%3===0?'rgba(111,65,51,.10)':'rgba(255,247,199,.14)';p.fillRect(x,y,3+(i%8),1+(i%12));}
+ const line=(x,y,w,h,color)=>{p.fillStyle=color;p.fillRect(x,y,w,h)};
+ // roofline and carved stucco cornices
+ line(0,0,256,14,'#483c3d');line(0,14,256,17,'#fff0bc');line(0,31,256,7,'#946d55');
+ line(0,42,256,5,'#7d5a50');line(0,249,256,15,'#fff0bc');line(0,264,256,7,'#57464a');
+ // narrow columns divide the facade into a rhythmic Havana streetscape
+ for(const x of [6,124,243]){line(x,48,9,445,'#fff0bd');line(x+7,48,4,445,'#7c6155')}
+ // arched upper windows with wooden shutters and ink outlines
+ function arch(x,y,w,h){p.fillStyle='#493d42';p.beginPath();p.moveTo(x,y+h);p.lineTo(x,y+w/2);p.arc(x+w/2,y+w/2,w/2,Math.PI,0);p.lineTo(x+w,y+h);p.closePath();p.fill();
+ p.fillStyle='#304c5b';p.beginPath();p.moveTo(x+7,y+h-6);p.lineTo(x+7,y+w/2+6);p.arc(x+w/2,y+w/2+6,w/2-7,Math.PI,0);p.lineTo(x+w-7,y+h-6);p.closePath();p.fill();
+ line(x+w/2-3,y+w/2,6,h-w/2,'#e9bf80');line(x+7,y+h*.66,w-14,5,'#e9bf80');
+ for(const xx of [x+15,x+w-21]){line(xx,y+w*.65,7,h-w*.65-9,'#7d6652')}
+ p.strokeStyle='#fff0bd';p.lineWidth=5;p.beginPath();p.arc(x+w/2,y+w/2,w/2+5,Math.PI,0);p.stroke();}
+ arch(22,75,89,150);arch(144,75,89,150);
+ // wrought iron balconies: rails, balusters and scroll details
+ for(const y of [211,220,231])line(13,y,230,5,'#34343a');
+ for(let x=20;x<241;x+=13){line(x,215,4,34,'#33323b');p.strokeStyle='#33323b';p.lineWidth=2;p.beginPath();p.arc(x+6,232,5,0,Math.PI*2);p.stroke()}
+ // arcaded ground floor; dark recessed doorways
+ for(const x of [18,140]){p.fillStyle='#554348';p.beginPath();p.moveTo(x,489);p.lineTo(x,354);p.arc(x+49,354,49,Math.PI,0);p.lineTo(x+98,489);p.fill();
+ p.fillStyle='#43686d';p.fillRect(x+9,357,80,131);for(let j=0;j<5;j++)line(x+12+j*16,368,5,119,'#304e55');
+ p.strokeStyle='#ffe7b1';p.lineWidth=9;p.beginPath();p.arc(x+49,354,49,Math.PI,0);p.stroke();}
+ line(0,491,256,21,'#574c4b');
+ return c;
+}
+const havanaFacade=makeHavanaFacade();
+
 function render(){
  const w=canvas.width,h=canvas.height;
  // Sky and pavement are drawn separately from the raycast walls.
@@ -61,6 +97,13 @@ function render(){
   const shade=Math.max(.30,1-corrected*.055-(side?.12:0));
   const r=Math.floor(base[0]*shade),g=Math.floor(base[1]*shade),b=Math.floor(base[2]*shade);
   const x=Math.floor(i*colW),cw=Math.ceil(colW)+1;
+  if(tile==='3'){
+   const tx=Math.max(0,Math.min(255,Math.floor(textureX*256)));
+   ctx.drawImage(havanaFacade,tx,0,1,512,x,top,cw,wallHeight);
+   ctx.fillStyle=`rgba(32,31,41,${Math.min(.65,1-shade)})`;
+   ctx.fillRect(x,top,cw,wallHeight);
+   continue;
+  }
   ctx.fillStyle=`rgb(${r},${g},${b})`;ctx.fillRect(x,top,cw,wallHeight);
   // Inked façade outlines and brush-like horizontal wash.
   if(textureX<.028||textureX>.975){ctx.fillStyle='rgba(39,37,41,.77)';ctx.fillRect(x,top,cw,wallHeight)}
