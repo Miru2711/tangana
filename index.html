@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>TÁNGANA · Combat Test 0.6</title><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0b0d12;color:white;font-family:system-ui;touch-action:none}canvas{width:100vw;height:100dvh;display:block;image-rendering:pixelated}#label{position:fixed;top:env(safe-area-inset-top,0px);left:12px;background:#10131acc;border:1px solid #fff6;padding:9px 12px;font-weight:800;letter-spacing:.08em}#help{position:fixed;top:53px;left:12px;font-size:12px;color:#e6e6e6;background:#10131a99;padding:5px}#pad{position:fixed;bottom:32px;left:20px;width:138px;height:138px;border:3px solid #ffffff9c;border-radius:50%;background:#ffffff1c;touch-action:none}#nub{position:absolute;width:60px;height:60px;left:36px;top:36px;background:#f4ead4c9;border-radius:50%;box-shadow:0 0 0 2px #1117}#turn{position:fixed;right:18px;bottom:44px;width:155px;height:122px;border:2px solid #ffffff7d;border-radius:18px;background:#ffffff1c;display:grid;place-items:center;text-align:center;font-size:15px;font-weight:700;touch-action:none}#fire{position:fixed;right:34px;bottom:190px;width:88px;height:88px;border-radius:50%;background:#ba4036e8;color:#fff;border:3px solid #fff9;font-weight:900;font-size:19px;touch-action:none}#score{position:fixed;top:92px;left:12px;background:#10131acc;padding:6px 10px;font-weight:700}#reset{position:fixed;right:14px;top:15px;background:#151922;color:#fff;border:1px solid #fff7;padding:10px 13px;border-radius:8px}#status{position:fixed;bottom:6px;left:0;right:0;text-align:center;font-size:11px;opacity:.8;pointer-events:none}#weapons{position:fixed;left:12px;bottom:184px;display:flex;gap:6px;z-index:3}#weapons button{background:#111b25d9;border:2px solid #ffffff85;border-radius:9px;color:white;font-size:12px;font-weight:800;padding:10px 8px;min-height:44px}#weapons button.selected{border-color:#ffe4a2;background:#6c3d20}#effect{position:fixed;top:29%;left:0;right:0;text-align:center;pointer-events:none;font-size:clamp(28px,8vw,60px);font-weight:1000;color:#fff2aa;text-shadow:3px 4px #402017;opacity:0}#effect.on{opacity:1}</style></head><body><canvas id="view"></canvas><div id="label">TÁNGANA · 0.6</div><div id="help">Survive the patrol · aim and fire</div><button id="reset">RESET</button><div id="score">HP 100 · KOs 0 / 4</div><div id="weapons"><button data-weapon="machete" class="selected">1 MACHETE</button><button data-weapon="revolver">2 REVOLVER</button><button data-weapon="cannon">3 CANNON</button></div><div id="effect"></div><button id="fire" aria-label="Fire">FIRE</button><div id="pad"><div id="nub"></div></div><div id="turn">DRAG TO TURN<br>↔</div><div id="status">Combat 0.6 · three weapons · improved enemy spacing</div><script>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>TÁNGANA · Havana Cartoon 0.7</title><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0b0d12;color:white;font-family:system-ui;touch-action:none}canvas{width:100vw;height:100dvh;display:block;image-rendering:pixelated}#label{position:fixed;top:env(safe-area-inset-top,0px);left:12px;background:#10131acc;border:1px solid #fff6;padding:9px 12px;font-weight:800;letter-spacing:.08em}#help{position:fixed;top:53px;left:12px;font-size:12px;color:#e6e6e6;background:#10131a99;padding:5px}#pad{position:fixed;bottom:32px;left:20px;width:138px;height:138px;border:3px solid #ffffff9c;border-radius:50%;background:#ffffff1c;touch-action:none}#nub{position:absolute;width:60px;height:60px;left:36px;top:36px;background:#f4ead4c9;border-radius:50%;box-shadow:0 0 0 2px #1117}#turn{position:fixed;right:18px;bottom:44px;width:155px;height:122px;border:2px solid #ffffff7d;border-radius:18px;background:#ffffff1c;display:grid;place-items:center;text-align:center;font-size:15px;font-weight:700;touch-action:none}#fire{position:fixed;right:34px;bottom:190px;width:88px;height:88px;border-radius:50%;background:#ba4036e8;color:#fff;border:3px solid #fff9;font-weight:900;font-size:19px;touch-action:none}#score{position:fixed;top:92px;left:12px;background:#10131acc;padding:6px 10px;font-weight:700}#reset{position:fixed;right:14px;top:15px;background:#151922;color:#fff;border:1px solid #fff7;padding:10px 13px;border-radius:8px}#status{position:fixed;bottom:6px;left:0;right:0;text-align:center;font-size:11px;opacity:.8;pointer-events:none}#weapons{position:fixed;left:12px;bottom:184px;display:flex;gap:6px;z-index:3}#weapons button{background:#111b25d9;border:2px solid #ffffff85;border-radius:9px;color:white;font-size:12px;font-weight:800;padding:10px 8px;min-height:44px}#weapons button.selected{border-color:#ffe4a2;background:#6c3d20}#effect{position:fixed;top:29%;left:0;right:0;text-align:center;pointer-events:none;font-size:clamp(28px,8vw,60px);font-weight:1000;color:#fff2aa;text-shadow:3px 4px #402017;opacity:0}#effect.on{opacity:1}</style></head><body><canvas id="view"></canvas><div id="label">TÁNGANA · 0.7</div><div id="help">Survive the patrol · aim and fire</div><button id="reset">RESET</button><div id="score">HP 100 · KOs 0 / 4</div><div id="weapons"><button data-weapon="machete" class="selected">1 MACHETE</button><button data-weapon="revolver">2 REVOLVER</button><button data-weapon="cannon">3 CANNON</button></div><div id="effect"></div><button id="fire" aria-label="Fire">FIRE</button><div id="pad"><div id="nub"></div></div><div id="turn">DRAG TO TURN<br>↔</div><div id="status">Havana cartoon study 0.7 · original procedural art</div><script>
 'use strict';
 const canvas=document.getElementById('view'),ctx=canvas.getContext('2d',{alpha:false});
 const level=[
@@ -35,8 +35,13 @@ function move(dx,dy){let r=.22;if(!solid(player.x+dx+Math.sign(dx)*r,player.y))p
 function render(){
  const w=canvas.width,h=canvas.height;
  // Sky and pavement are drawn separately from the raycast walls.
- const sky=ctx.createLinearGradient(0,0,0,h/2);sky.addColorStop(0,'#78b7d5');sky.addColorStop(1,'#d6d4c5');ctx.fillStyle=sky;ctx.fillRect(0,0,w,h/2);
- ctx.fillStyle='#8b8073';ctx.fillRect(0,h/2,w,h/2);
+ const sky=ctx.createLinearGradient(0,0,0,h/2);sky.addColorStop(0,'#6caec5');sky.addColorStop(.75,'#d8d5ac');sky.addColorStop(1,'#f7cc92');ctx.fillStyle=sky;ctx.fillRect(0,0,w,h/2);
+ // Painted cartoon clouds, gently drifting with camera direction.
+ ctx.fillStyle='#fff2d5';for(let j=0;j<5;j++){const cx=((j*231-player.a*90)%(w+270)+(w+270))%(w+270)-90,cy=h*(.085+j%3*.06);ctx.beginPath();ctx.ellipse(cx,cy,58,13,0,0,Math.PI*2);ctx.ellipse(cx-25,cy-9,25,17,0,0,Math.PI*2);ctx.ellipse(cx+19,cy-13,34,22,0,0,Math.PI*2);ctx.fill()}
+ const street=ctx.createLinearGradient(0,h/2,0,h);street.addColorStop(0,'#b99b7e');street.addColorStop(1,'#8e7565');ctx.fillStyle=street;ctx.fillRect(0,h/2,w,h/2);
+ // Inked paving stones become smaller toward the horizon.
+ ctx.strokeStyle='rgba(52,43,41,.27)';ctx.lineWidth=Math.max(1,w/500);for(let row=1;row<9;row++){const yy=h/2+(h/2)*(row/9)**1.6;ctx.beginPath();ctx.moveTo(0,yy);ctx.lineTo(w,yy);ctx.stroke();const spacing=20+row*24;for(let x=((row%2)*spacing/2);x<w;x+=spacing){ctx.beginPath();ctx.moveTo(x,yy);ctx.lineTo(w/2+(x-w/2)*1.13,Math.min(h,yy+12+row*2));ctx.stroke()}}
+ 
  const fov=Math.PI/2.85,columns=Math.min(w,480),colW=w/columns; const depth=new Float32Array(columns);
  for(let i=0;i<columns;i++){
   const angle=player.a+Math.atan((2*i/columns-1)*Math.tan(fov/2)),dx=Math.cos(angle),dy=Math.sin(angle);
@@ -50,25 +55,39 @@ function render(){
   const distance=Math.max(.08,side===0?distX-ddx:distY-ddy),corrected=Math.max(.08,distance*Math.cos(angle-player.a));
   depth[i]=corrected;const wallHeight=Math.min(h*3,h/(corrected*.78)),top=(h-wallHeight)/2;
   const tile=level[mapY]?.[mapX]||'1',hit=side===0?player.y+distance*dy:player.x+distance*dx,textureX=hit-Math.floor(hit);
-  const colors={'1':[188,171,145],'2':[232,174,104],'3':[113,181,176],'4':[211,130,122],'5':[174,166,203]};
+  const colors={'1':[222,194,147],'2':[244,177,99],'3':[103,184,176],'4':[226,130,121],'5':[171,159,203]};
   const base=colors[tile]||colors['1'];
   const mortar=textureX<.035||((Math.floor((top+wallHeight*.25)/Math.max(1,wallHeight/5))%2===0)&&textureX>.96);
   const shade=Math.max(.30,1-corrected*.055-(side?.12:0));
   const r=Math.floor(base[0]*shade),g=Math.floor(base[1]*shade),b=Math.floor(base[2]*shade);
   const x=Math.floor(i*colW),cw=Math.ceil(colW)+1;
   ctx.fillStyle=`rgb(${r},${g},${b})`;ctx.fillRect(x,top,cw,wallHeight);
+  // Inked façade outlines and brush-like horizontal wash.
+  if(textureX<.028||textureX>.975){ctx.fillStyle='rgba(39,37,41,.77)';ctx.fillRect(x,top,cw,wallHeight)}
+  if(textureX>.055&&textureX<.95&&Math.floor(textureX*31)%7===0){ctx.fillStyle='rgba(255,241,207,.10)';ctx.fillRect(x,top,cw,wallHeight)}
+  ctx.fillStyle='rgba(37,34,38,.8)';ctx.fillRect(x,top,cw,Math.max(2,h*.004));
+  // A scalloped roofline is painted into each colorful building.
+  if(tile!=='1'&&textureX>.08&&textureX<.92){ctx.fillStyle='#f6e1ad';ctx.fillRect(x,top+wallHeight*.065,cw,Math.max(2,wallHeight*.025));ctx.fillStyle='#453b3e';ctx.fillRect(x,top+wallHeight*.092,cw,Math.max(1,wallHeight*.008))}
+  
   // Hand-built architectural details: horizontal cornice and inset window bands.
   if(tile!=='1'){
    ctx.fillStyle=`rgba(53,48,46,${Math.min(.8,.25+shade*.3)})`;
    for(let k=1;k<=2;k++)ctx.fillRect(x,top+wallHeight*k/6,cw,Math.max(1,wallHeight*.014));
    const windowStripe=textureX>.24&&textureX<.74;
-   if(windowStripe){ctx.fillStyle='#273d48';ctx.fillRect(x,top+wallHeight*.30,cw,wallHeight*.22);ctx.fillRect(x,top+wallHeight*.65,cw,wallHeight*.18)}
+   if(windowStripe){
+    ctx.fillStyle='#3a333c';ctx.fillRect(x,top+wallHeight*.285,cw,wallHeight*.255);ctx.fillRect(x,top+wallHeight*.64,cw,wallHeight*.195);
+    ctx.fillStyle='#385c6c';ctx.fillRect(x,top+wallHeight*.305,cw,wallHeight*.215);ctx.fillRect(x,top+wallHeight*.66,cw,wallHeight*.155);
+    // Gold balcony rails and carved lintels.
+    ctx.fillStyle='#f7d6a1';ctx.fillRect(x,top+wallHeight*.278,cw,Math.max(2,wallHeight*.018));ctx.fillRect(x,top+wallHeight*.55,cw,Math.max(2,wallHeight*.018));
+    ctx.fillStyle='#352f35';ctx.fillRect(x,top+wallHeight*.555,cw,Math.max(2,wallHeight*.018));
+    if(Math.floor(textureX*26)%4===0){ctx.fillStyle='#302e35';ctx.fillRect(x,top+wallHeight*.49,cw,wallHeight*.075)}
+   }
    if(textureX>.47&&textureX<.51){ctx.fillStyle='#e3d6b9';ctx.fillRect(x,top+wallHeight*.30,cw,wallHeight*.22)}
   }else{
    ctx.fillStyle='rgba(65,57,50,.30)';for(let k=1;k<=4;k++)ctx.fillRect(x,top+wallHeight*k/5,cw,Math.max(1,wallHeight*.009));
   }
   if(mortar){ctx.fillStyle='rgba(65,52,44,.18)';ctx.fillRect(x,top,cw,wallHeight)}
-  ctx.fillStyle='#554c42';ctx.fillRect(x,top,cw,Math.max(1,h*.003));
+  ctx.fillStyle='#353139';ctx.fillRect(x,top+wallHeight*.975,cw,Math.max(2,wallHeight*.025));
  }
  // Draw mobile enemy silhouettes back-to-front, clipped by the wall depth buffer.
  const focal=w/(2*Math.tan(fov/2));
