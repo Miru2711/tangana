@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>TÁNGANA · PNR Officer Sprites 1.1</title><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0b0d12;color:white;font-family:system-ui,sans-serif;touch-action:none}canvas{width:100vw;height:100dvh;display:block;image-rendering:auto}#label{position:fixed;top:env(safe-area-inset-top,0px);left:12px;background:#10131acc;border:1px solid #fff6;padding:9px 12px;font-weight:800;letter-spacing:.08em}#help{position:fixed;top:53px;left:12px;font-size:12px;color:#e6e6e6;background:#10131a99;padding:5px}#pad{position:fixed;bottom:32px;left:20px;width:138px;height:138px;border:3px solid #ffffff9c;border-radius:50%;background:#ffffff1c;touch-action:none}#nub{position:absolute;width:60px;height:60px;left:36px;top:36px;background:#f4ead4c9;border-radius:50%;box-shadow:0 0 0 2px #1117}#turn{position:fixed;right:18px;bottom:44px;width:155px;height:122px;border:2px solid #ffffff7d;border-radius:18px;background:#ffffff1c;display:grid;place-items:center;text-align:center;font-size:15px;font-weight:700;touch-action:none}#fire{position:fixed;right:34px;bottom:190px;width:88px;height:88px;border-radius:50%;background:#ba4036e8;color:#fff;border:3px solid #fff9;font-weight:900;font-size:19px;touch-action:none}#score{position:fixed;top:92px;left:12px;background:#10131acc;padding:6px 10px;font-weight:700;font-size:clamp(12px,2.6vw,18px);max-width:calc(100vw - 24px)}#reset{position:fixed;right:14px;top:15px;background:#151922;color:#fff;border:1px solid #fff7;padding:10px 13px;border-radius:8px}#status{position:fixed;bottom:6px;left:0;right:0;text-align:center;font-size:11px;opacity:.8;pointer-events:none}#weapons{position:fixed;left:12px;bottom:184px;display:flex;gap:6px;z-index:3}#weapons button{background:#111b25d9;border:2px solid #ffffff85;border-radius:9px;color:white;font-size:clamp(9px,2.4vw,12px);font-weight:800;padding:10px 8px;min-height:44px}#weapons button.selected{border-color:#ffe4a2;background:#6c3d20}#effect{position:fixed;top:29%;left:0;right:0;text-align:center;pointer-events:none;font-size:clamp(28px,8vw,60px);font-weight:1000;color:#fff2aa;text-shadow:3px 4px #402017;opacity:0}#effect.on{opacity:1}</style></head><body><canvas id="view"></canvas><div id="label">TÁNGANA · 1.1</div><div id="help">Survive the patrol · aim and fire</div><button id="reset">RESET</button><div id="score">HP 100 · KOs 0 / 4</div><div id="weapons"><button data-weapon="machete" class="selected">1 MACHETE</button><button data-weapon="revolver">2 REVOLVER</button><button data-weapon="cannon">3 CANNON</button></div><div id="effect"></div><button id="fire" aria-label="Fire">FIRE</button><div id="pad"><div id="nub"></div></div><div id="turn">DRAG TO TURN<br>↔</div><div id="status">HABANA VIEJA · PNR illustrated enemy test · 1.1</div><script>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>TÁNGANA · PNR Officer Sprites 1.1</title><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0b0d12;color:white;font-family:system-ui,sans-serif;touch-action:none}canvas{width:100vw;height:100dvh;display:block;image-rendering:auto}#label{position:fixed;top:env(safe-area-inset-top,0px);left:12px;background:#10131acc;border:1px solid #fff6;padding:9px 12px;font-weight:800;letter-spacing:.08em}#help{position:fixed;top:53px;left:12px;font-size:12px;color:#e6e6e6;background:#10131a99;padding:5px}#pad{position:fixed;bottom:32px;left:20px;width:138px;height:138px;border:3px solid #ffffff9c;border-radius:50%;background:#ffffff1c;touch-action:none}#nub{position:absolute;width:60px;height:60px;left:36px;top:36px;background:#f4ead4c9;border-radius:50%;box-shadow:0 0 0 2px #1117}#turn{position:fixed;right:18px;bottom:44px;width:155px;height:122px;border:2px solid #ffffff7d;border-radius:18px;background:#ffffff1c;display:grid;place-items:center;text-align:center;font-size:15px;font-weight:700;touch-action:none}#fire{position:fixed;right:34px;bottom:190px;width:88px;height:88px;border-radius:50%;background:#ba4036e8;color:#fff;border:3px solid #fff9;font-weight:900;font-size:19px;touch-action:none}#score{position:fixed;top:92px;left:12px;background:#10131acc;padding:6px 10px;font-weight:700;font-size:clamp(12px,2.6vw,18px);max-width:calc(100vw - 24px)}#reset{position:fixed;right:14px;top:15px;background:#151922;color:#fff;border:1px solid #fff7;padding:10px 13px;border-radius:8px}#status{position:fixed;bottom:6px;left:0;right:0;text-align:center;font-size:11px;opacity:.8;pointer-events:none}#weapons{position:fixed;left:12px;bottom:184px;display:flex;gap:6px;z-index:3}#weapons button{background:#111b25d9;border:2px solid #ffffff85;border-radius:9px;color:white;font-size:clamp(9px,2.4vw,12px);font-weight:800;padding:10px 8px;min-height:44px}#weapons button.selected{border-color:#ffe4a2;background:#6c3d20}#effect{position:fixed;top:29%;left:0;right:0;text-align:center;pointer-events:none;font-size:clamp(28px,8vw,60px);font-weight:1000;color:#fff2aa;text-shadow:3px 4px #402017;opacity:0}#effect.on{opacity:1}</style></head><body><canvas id="view"></canvas><div id="label">TÁNGANA · 1.2</div><div id="help">Survive the patrol · aim and fire</div><button id="reset">RESET</button><div id="score">HP 100 · KOs 0 / 4</div><div id="weapons"><button data-weapon="machete" class="selected">1 MACHETE</button><button data-weapon="revolver">2 REVOLVER</button><button data-weapon="cannon">3 CANNON</button></div><div id="effect"></div><button id="fire" aria-label="Fire">FIRE</button><div id="pad"><div id="nub"></div></div><div id="turn">DRAG TO TURN<br>↔</div><div id="status">HABANA VIEJA · PNR combat animation · 1.2</div><script>
 'use strict';
 const canvas=document.getElementById('view'),ctx=canvas.getContext('2d',{alpha:false});
 const level=[
@@ -24,7 +24,7 @@ const level=[
 '111111111111111111111111'
 ];
 const spawn=[{x:11.5,y:2.5},{x:12.5,y:5.5},{x:10.5,y:8.5},{x:13.5,y:11.5}];
-let targets=[];function spawnEnemies(){targets=spawn.map((t,i)=>({...t,alive:true,hp:3,attack:0,phase:i*1.7}));}spawnEnemies();
+let targets=[];function spawnEnemies(){targets=spawn.map((t,i)=>({...t,alive:true,hp:3,attack:0,phase:i*1.7,hitTime:0,deathTime:0,shotTime:0,aimTime:0,walkPhase:0}));}spawnEnemies();
 let health=100,gameOver=false,invulnUntil=0;const scoreEl=document.getElementById('score');
 function updateHUD(){scoreEl.textContent=`HP ${Math.ceil(health)} · KOs ${hits}/${targets.length} · ${weapon.toUpperCase()} ${weapon==='revolver'?(reloadUntil>performance.now()?'RELOADING':ammo+'/6'):''} · SHOTS ${shots}`;}
 function resetGame(){Object.assign(player,{x:10.5,y:15.8,a:-Math.PI/2});spawnEnemies();health=100;gameOver=false;shots=hits=0;flashUntil=hitUntil=invulnUntil=0;ammo=6;reloadUntil=0;impactBursts=[];projectiles=[];setWeapon("machete");document.getElementById('help').textContent='Survive the patrol · aim and fire';updateHUD();}
@@ -222,34 +222,62 @@ function render(){
   if(mortar){ctx.fillStyle='rgba(65,52,44,.18)';ctx.fillRect(x,top,cw,wallHeight)}
   ctx.fillStyle='#353139';ctx.fillRect(x,top+wallHeight*.975,cw,Math.max(2,wallHeight*.025));
  }
- // Draw mobile enemy silhouettes back-to-front, clipped by the wall depth buffer.
- const focal=w/(2*Math.tan(fov/2));
- for(const t of targets.filter(t=>t.alive).sort((a,b)=>Math.hypot(b.x-player.x,b.y-player.y)-Math.hypot(a.x-player.x,a.y-player.y))){
+ // Project full-body PNR officers onto the same ground plane as the walls.
+ const focal=w/(2*Math.tan(fov/2)),nowEnemy=performance.now();
+ const visibleEnemies=targets.filter(t=>t.alive||nowEnemy-t.deathTime<9000)
+  .sort((a,b)=>Math.hypot(b.x-player.x,b.y-player.y)-Math.hypot(a.x-player.x,a.y-player.y));
+ for(const t of visibleEnemies){
   const dx=t.x-player.x,dy=t.y-player.y;
   const front=dx*Math.cos(player.a)+dy*Math.sin(player.a);
   const lateral=-dx*Math.sin(player.a)+dy*Math.cos(player.a);
-  if(front<=.15)continue;
+  if(front<=.2)continue;
   const center=w/2+lateral/front*focal;
-  // Feet remain on the projected street plane: no vertical sprite bobbing.
-  const size=Math.min(h*.58,h/(Math.max(front,.5)*.86)*.74);
-  const left=center-size*.30;
-  const feet=h/2+size*.56;
-  const top=feet-size;
-  const moving=Math.hypot(t.x-(t.prevX??t.x),t.y-(t.prevY??t.y))>.0001;
-  const animIndex=Math.floor(performance.now()/145+t.phase*2)%4;
-  const art=moving?pnrSprites['walk'+animIndex]:pnrSprites.idle;
+  const wallScale=h/(Math.max(front,.4)*.59);
+  // Ground contact: bottom of a wall at the same depth, not screen center.
+  const groundY=h/2+wallScale*.5;
+  const size=Math.min(h*1.12,wallScale*.66);
+  const dying=!t.alive;
+  const deathAge=dying?nowEnemy-t.deathTime:0;
+  const walking=Math.hypot(t.x-(t.prevX??t.x),t.y-(t.prevY??t.y))>.0001;
+  let art=pnrSprites.idle;
+  if(dying)art=pnrSprites.hit;
+  else if(nowEnemy<t.hitTime)art=pnrSprites.hit;
+  else if(nowEnemy<t.shotTime)art=pnrSprites.shoot;
+  else if(nowEnemy<t.aimTime)art=pnrSprites.aim;
+  else if(walking)art=pnrSprites['walk'+Math.floor(t.walkPhase)%4];
   if(!art.complete||!art.naturalWidth)continue;
-  const drawW=size*.60;
+  let drawH=size,drawW=size*(art.naturalWidth/art.naturalHeight);
+  let top=groundY-drawH;
+  if(dying){
+   const collapse=Math.min(1,deathAge/450);
+   drawH=size*(1-.72*collapse);drawW=size*(.6+.25*collapse);
+   top=groundY-drawH;
+  }
   const x0=center-drawW/2;
-  for(let px=Math.max(0,Math.floor(x0));px<Math.min(w,Math.ceil(x0+drawW));px+=Math.max(1,Math.ceil(w/columns))){
+  // Per-column occlusion keeps the sprite behind walls.
+  const stride=Math.max(1,Math.ceil(w/columns));
+  for(let px=Math.max(0,Math.floor(x0));px<Math.min(w,Math.ceil(x0+drawW));px+=stride){
    const column=Math.min(columns-1,Math.floor(px/w*columns));
    if(front>depth[column]+.08)continue;
    const u=(px-x0)/drawW;
    const srcX=Math.min(art.naturalWidth-1,Math.max(0,Math.floor(u*art.naturalWidth)));
-   ctx.drawImage(art,srcX,0,1,art.naturalHeight,px,top,Math.ceil(w/columns)+1,size);
+   ctx.save();
+   if(dying)ctx.globalAlpha=Math.max(0,1-Math.max(0,deathAge-6000)/3000);
+   if(!dying&&nowEnemy<t.hitTime)ctx.filter='brightness(1.45) sepia(.3)';
+   ctx.drawImage(art,srcX,0,1,art.naturalHeight,px,top,stride+1,drawH);
+   ctx.restore();
   }
-  if(t.hp<3){ctx.fillStyle='#421a1b';ctx.fillRect(center-drawW*.28,top-9,drawW*.56,5);ctx.fillStyle='#d84939';ctx.fillRect(center-drawW*.28,top-9,drawW*.56*t.hp/3,5);}
-
+  // Explicit firing feedback in addition to the shoot sprite.
+  if(!dying&&nowEnemy<t.shotTime){
+   const mx=center+drawW*.17,my=top+drawH*.35;
+   const radius=Math.max(5,Math.min(30,size*.12));
+   ctx.fillStyle='#ffea86';ctx.beginPath();
+   for(let i=0;i<12;i++){let a=i*Math.PI/6,r=i%2?radius*.38:radius;
+    let xx=mx+Math.cos(a)*r,yy=my+Math.sin(a)*r;
+    if(i===0)ctx.moveTo(xx,yy);else ctx.lineTo(xx,yy)}ctx.closePath();ctx.fill();
+   ctx.strokeStyle='#e65b27';ctx.lineWidth=2;ctx.stroke();
+  }
+  if(t.alive&&t.hp<3){ctx.fillStyle='#421a1b';ctx.fillRect(center-drawW*.28,top-9,drawW*.56,5);ctx.fillStyle='#d84939';ctx.fillRect(center-drawW*.28,top-9,drawW*.56*t.hp/3,5);}
  }
  if(performance.now()<invulnUntil){ctx.fillStyle='#f02a291b';ctx.fillRect(0,0,w,h)}
  if(gameOver){ctx.fillStyle='#100c10b8';ctx.fillRect(0,h*.32,w,h*.3);ctx.fillStyle='#fff';ctx.font=`bold ${Math.round(w*.075)}px system-ui`;ctx.textAlign='center';ctx.fillText(health<=0?'GAME OVER':'AREA CLEARED',w/2,h*.45);ctx.font=`${Math.round(w*.036)}px system-ui`;ctx.fillText('Tap RESET to play again',w/2,h*.51);ctx.textAlign='start'}
@@ -299,7 +327,7 @@ function render(){
 updateHUD();
 function resize(){let scale=Math.min(devicePixelRatio||1,1.5);canvas.width=Math.max(320,Math.floor(innerWidth*scale));canvas.height=Math.max(400,Math.floor(innerHeight*scale));render()}addEventListener('resize',resize);resize();
 addEventListener('keydown',e=>{keys.add(e.code);if(e.code==='Space'&&!e.repeat)fire();if(['Digit1','Digit2','Digit3'].includes(e.code))setWeapon(({Digit1:'machete',Digit2:'revolver',Digit3:'cannon'})[e.code]);if(['Space','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code))e.preventDefault()});addEventListener('keyup',e=>keys.delete(e.code));function wallDistance(angle){let x=player.x,y=player.y,dx=Math.cos(angle),dy=Math.sin(angle);for(let d=0;d<30;d+=.035){if(solid(x+dx*d,y+dy*d))return d}return 30}
-function hurt(t,amount){if(!t.alive)return;t.hp-=amount;hitUntil=performance.now()+180;if(t.hp<=0){t.alive=false;hits++;if(hits===targets.length){gameOver=true;document.getElementById('help').textContent='Area cleared! Tap RESET to retry.'}}updateHUD()}
+function hurt(t,amount){if(!t.alive)return;t.hp-=amount;t.hitTime=performance.now()+360;t.pendingShot=0;hitUntil=performance.now()+180;if(t.hp<=0){t.alive=false;t.deathTime=performance.now();hits++;if(hits===targets.length){gameOver=true;document.getElementById('help').textContent='Area cleared! Tap RESET to retry.'}}updateHUD()}
 function fire(){if(gameOver)return;const now=performance.now();const cooldown={machete:380,revolver:330,cannon:1100}[weapon];if(now-lastAttack<cooldown)return;
  if(weapon==='revolver'&&reloadUntil>now)return; if(weapon==='revolver'&&ammo===0){reloadUntil=now+1050;lastAttack=now;shout('RELOADING');updateHUD();return}
  lastAttack=now;shots++;attackUntil=now+280;flashUntil=now+(weapon==='machete'?0:100);
@@ -318,11 +346,25 @@ function enemyTick(dt,now){if(gameOver)return;
  for(const t of targets){if(!t.alive)continue;
   t.prevX=t.x;t.prevY=t.y;
   const dx=player.x-t.x,dy=player.y-t.y,d=Math.hypot(dx,dy);
-  if(d<9&&d>2.6){const speed=.65*dt;const vx=dx/d*speed,vy=dy/d*speed;
-   if(!solid(t.x+vx+Math.sign(vx)*.2,t.y)&&Math.hypot(t.x+vx-player.x,t.y-player.y)>2.6)t.x+=vx;
-   if(!solid(t.x,t.y+vy+Math.sign(vy)*.2)&&Math.hypot(t.x-player.x,t.y+vy-player.y)>2.6)t.y+=vy;
+  if(d<9&&d>3.2&&now>t.hitTime){const speed=.65*dt;const vx=dx/d*speed,vy=dy/d*speed;
+   if(!solid(t.x+vx+Math.sign(vx)*.2,t.y)&&Math.hypot(t.x+vx-player.x,t.y-player.y)>3.2)t.x+=vx;
+   if(!solid(t.x,t.y+vy+Math.sign(vy)*.2)&&Math.hypot(t.x-player.x,t.y+vy-player.y)>3.2)t.y+=vy;
   }
-  if(d<2.8&&now>t.attack&&now>invulnUntil){health=Math.max(0,health-10);t.attack=now+1100;invulnUntil=now+650;updateHUD();if(health<=0){gameOver=true;document.getElementById('help').textContent='You were defeated. Tap RESET.';}}
+  const moved=Math.hypot(t.x-t.prevX,t.y-t.prevY);
+  if(moved>.00001)t.walkPhase+=dt*7;
+  // The officer raises the pistol before shooting, then flashes/recoils.
+  // A clear line of sight and distance are required to hit the player.
+  const seesPlayer=d<8&&wallDistance(Math.atan2(t.y-player.y,t.x-player.x))>d-.35;
+  if(seesPlayer&&now>t.attack&&now>t.hitTime){
+   t.aimTime=now+360;t.attack=now+1450;
+   t.pendingShot=now+350;
+  }
+  if(t.pendingShot&&now>=t.pendingShot){
+   t.pendingShot=0;
+   if(!t.alive||now<t.hitTime)continue;
+   t.shotTime=now+240;
+   if(seesPlayer&&now>invulnUntil){health=Math.max(0,health-10);invulnUntil=now+650;updateHUD();if(health<=0){gameOver=true;document.getElementById('help').textContent='You were defeated. Tap RESET.';}}
+  }
  }
 }
 let last=performance.now();function frame(now){let dt=Math.min(.04,(now-last)/1000);last=now;let forward=(keys.has('KeyW')||keys.has('ArrowUp')?1:0)-(keys.has('KeyS')||keys.has('ArrowDown')?1:0)-joyY;let strafe=(keys.has('KeyD')?1:0)-(keys.has('KeyA')?1:0)+joyX;let mag=Math.max(1,Math.hypot(forward,strafe));forward/=mag;strafe/=mag;player.a+=((keys.has('ArrowRight')?1:0)-(keys.has('ArrowLeft')?1:0))*dt*2.2;let speed=dt*2.6;if(!gameOver)move((Math.cos(player.a)*forward-Math.sin(player.a)*strafe)*speed,(Math.sin(player.a)*forward+Math.cos(player.a)*strafe)*speed);if(reloadUntil&&now>=reloadUntil){ammo=6;reloadUntil=0;updateHUD()}impactBursts=impactBursts.filter(p=>(p.life-=dt)>0);if(!gameOver)tickProjectiles(dt);else projectiles=[];enemyTick(dt,now);render();requestAnimationFrame(frame)}requestAnimationFrame(frame);
