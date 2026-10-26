@@ -1,35 +1,35 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>TÁNGANA · Havana Illustrated Havana 0.8</title><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0b0d12;color:white;font-family:system-ui;touch-action:none}canvas{width:100vw;height:100dvh;display:block;image-rendering:pixelated}#label{position:fixed;top:env(safe-area-inset-top,0px);left:12px;background:#10131acc;border:1px solid #fff6;padding:9px 12px;font-weight:800;letter-spacing:.08em}#help{position:fixed;top:53px;left:12px;font-size:12px;color:#e6e6e6;background:#10131a99;padding:5px}#pad{position:fixed;bottom:32px;left:20px;width:138px;height:138px;border:3px solid #ffffff9c;border-radius:50%;background:#ffffff1c;touch-action:none}#nub{position:absolute;width:60px;height:60px;left:36px;top:36px;background:#f4ead4c9;border-radius:50%;box-shadow:0 0 0 2px #1117}#turn{position:fixed;right:18px;bottom:44px;width:155px;height:122px;border:2px solid #ffffff7d;border-radius:18px;background:#ffffff1c;display:grid;place-items:center;text-align:center;font-size:15px;font-weight:700;touch-action:none}#fire{position:fixed;right:34px;bottom:190px;width:88px;height:88px;border-radius:50%;background:#ba4036e8;color:#fff;border:3px solid #fff9;font-weight:900;font-size:19px;touch-action:none}#score{position:fixed;top:92px;left:12px;background:#10131acc;padding:6px 10px;font-weight:700}#reset{position:fixed;right:14px;top:15px;background:#151922;color:#fff;border:1px solid #fff7;padding:10px 13px;border-radius:8px}#status{position:fixed;bottom:6px;left:0;right:0;text-align:center;font-size:11px;opacity:.8;pointer-events:none}#weapons{position:fixed;left:12px;bottom:184px;display:flex;gap:6px;z-index:3}#weapons button{background:#111b25d9;border:2px solid #ffffff85;border-radius:9px;color:white;font-size:12px;font-weight:800;padding:10px 8px;min-height:44px}#weapons button.selected{border-color:#ffe4a2;background:#6c3d20}#effect{position:fixed;top:29%;left:0;right:0;text-align:center;pointer-events:none;font-size:clamp(28px,8vw,60px);font-weight:1000;color:#fff2aa;text-shadow:3px 4px #402017;opacity:0}#effect.on{opacity:1}</style></head><body><canvas id="view"></canvas><div id="label">TÁNGANA · 0.8</div><div id="help">Survive the patrol · aim and fire</div><button id="reset">RESET</button><div id="score">HP 100 · KOs 0 / 4</div><div id="weapons"><button data-weapon="machete" class="selected">1 MACHETE</button><button data-weapon="revolver">2 REVOLVER</button><button data-weapon="cannon">3 CANNON</button></div><div id="effect"></div><button id="fire" aria-label="Fire">FIRE</button><div id="pad"><div id="nub"></div></div><div id="turn">DRAG TO TURN<br>↔</div><div id="status">Havana illustrated façade test 0.8 · original canvas artwork</div><script>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>TÁNGANA · Vintage Havana 0.9</title><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0b0d12;color:white;font-family:Georgia,serif;touch-action:none}canvas{width:100vw;height:100dvh;display:block;image-rendering:auto}#label{position:fixed;top:env(safe-area-inset-top,0px);left:12px;background:#10131acc;border:1px solid #fff6;padding:9px 12px;font-weight:800;letter-spacing:.08em}#help{position:fixed;top:53px;left:12px;font-size:12px;color:#e6e6e6;background:#10131a99;padding:5px}#pad{position:fixed;bottom:32px;left:20px;width:138px;height:138px;border:3px solid #ffffff9c;border-radius:50%;background:#ffffff1c;touch-action:none}#nub{position:absolute;width:60px;height:60px;left:36px;top:36px;background:#f4ead4c9;border-radius:50%;box-shadow:0 0 0 2px #1117}#turn{position:fixed;right:18px;bottom:44px;width:155px;height:122px;border:2px solid #ffffff7d;border-radius:18px;background:#ffffff1c;display:grid;place-items:center;text-align:center;font-size:15px;font-weight:700;touch-action:none}#fire{position:fixed;right:34px;bottom:190px;width:88px;height:88px;border-radius:50%;background:#ba4036e8;color:#fff;border:3px solid #fff9;font-weight:900;font-size:19px;touch-action:none}#score{position:fixed;top:92px;left:12px;background:#10131acc;padding:6px 10px;font-weight:700}#reset{position:fixed;right:14px;top:15px;background:#151922;color:#fff;border:1px solid #fff7;padding:10px 13px;border-radius:8px}#status{position:fixed;bottom:6px;left:0;right:0;text-align:center;font-size:11px;opacity:.8;pointer-events:none}#weapons{position:fixed;left:12px;bottom:184px;display:flex;gap:6px;z-index:3}#weapons button{background:#111b25d9;border:2px solid #ffffff85;border-radius:9px;color:white;font-size:12px;font-weight:800;padding:10px 8px;min-height:44px}#weapons button.selected{border-color:#ffe4a2;background:#6c3d20}#effect{position:fixed;top:29%;left:0;right:0;text-align:center;pointer-events:none;font-size:clamp(28px,8vw,60px);font-weight:1000;color:#fff2aa;text-shadow:3px 4px #402017;opacity:0}#effect.on{opacity:1}</style></head><body><canvas id="view"></canvas><div id="label">TÁNGANA · 0.9</div><div id="help">Survive the patrol · aim and fire</div><button id="reset">RESET</button><div id="score">HP 100 · KOs 0 / 4</div><div id="weapons"><button data-weapon="machete" class="selected">1 MACHETE</button><button data-weapon="revolver">2 REVOLVER</button><button data-weapon="cannon">3 CANNON</button></div><div id="effect"></div><button id="fire" aria-label="Fire">FIRE</button><div id="pad"><div id="nub"></div></div><div id="turn">DRAG TO TURN<br>↔</div><div id="status">Vintage Havana · illustrated street & cartoon cast · 0.9</div><script>
 'use strict';
 const canvas=document.getElementById('view'),ctx=canvas.getContext('2d',{alpha:false});
 const level=[
 '111111111111111111111111',
+'122222200000000333333331',
+'122222200000000333333331',
+'122222200000000333333331',
 '100000000000000000000001',
-'102222200000033333000001',
-'102000200000030003000001',
-'102000200000030003000001',
-'102222200000033333000001',
+'144444400000000555555551',
+'144444400000000555555551',
+'144444400000000555555551',
 '100000000000000000000001',
+'122222200000000333333331',
+'122222200000000333333331',
+'122222200000000333333331',
 '100000000000000000000001',
+'155555500000000444444441',
+'155555500000000444444441',
+'155555500000000444444441',
 '100000000000000000000001',
-'100000000000000000000001',
-'100000000000000000000001',
-'100000000000000000000001',
-'100000000000000000000001',
-'100444400000055555000001',
-'100400400000050005000001',
-'100400400000050005000001',
-'100444400000055555000001',
-'100000000000000000000001',
-'100000000000000000000001',
+'133333300000000222222221',
+'133333300000000222222221',
 '111111111111111111111111'
 ];
-const spawn=[{x:10.5,y:6.5},{x:7.5,y:9.5},{x:14.5,y:10.5},{x:17.5,y:8.5}];
+const spawn=[{x:11.5,y:4.5},{x:12.5,y:8.5},{x:10.5,y:12.5},{x:13.5,y:16.5}];
 let targets=[];function spawnEnemies(){targets=spawn.map((t,i)=>({...t,alive:true,hp:3,attack:0,phase:i*1.7}));}spawnEnemies();
 let health=100,gameOver=false,invulnUntil=0;const scoreEl=document.getElementById('score');
 function updateHUD(){scoreEl.textContent=`HP ${Math.ceil(health)} · KOs ${hits}/${targets.length} · ${weapon.toUpperCase()} ${weapon==='revolver'?(reloadUntil>performance.now()?'RELOADING':ammo+'/6'):''} · SHOTS ${shots}`;}
-function resetGame(){Object.assign(player,{x:10.5,y:10.5,a:-.4});spawnEnemies();health=100;gameOver=false;shots=hits=0;flashUntil=hitUntil=invulnUntil=0;ammo=6;reloadUntil=0;impactBursts=[];projectiles=[];setWeapon("machete");document.getElementById('help').textContent='Survive the patrol · aim and fire';updateHUD();}
+function resetGame(){Object.assign(player,{x:10.5,y:15.8,a:-Math.PI/2});spawnEnemies();health=100;gameOver=false;shots=hits=0;flashUntil=hitUntil=invulnUntil=0;ammo=6;reloadUntil=0;impactBursts=[];projectiles=[];setWeapon("machete");document.getElementById('help').textContent='Survive the patrol · aim and fire';updateHUD();}
 let shots=0,hits=0,flashUntil=0,hitUntil=0,weapon='machete',ammo=6,lastAttack=0,projectiles=[],attackUntil=0,reloadUntil=0,impactBursts=[];const effect=document.getElementById('effect');let effectTimer;function shout(message){effect.textContent=message;effect.classList.add('on');clearTimeout(effectTimer);effectTimer=setTimeout(()=>effect.classList.remove('on'),450)}function setWeapon(w){weapon=w;document.querySelectorAll('#weapons button').forEach(b=>b.classList.toggle('selected',b.dataset.weapon===w));updateHUD()}document.querySelectorAll('#weapons button').forEach(b=>b.addEventListener('pointerdown',e=>{e.preventDefault();setWeapon(b.dataset.weapon)}));
-const player={x:10.5,y:10.5,a:-.4};const keys=new Set();let joyX=0,joyY=0,turnV=0;
+const player={x:10.5,y:15.8,a:-Math.PI/2};const keys=new Set();let joyX=0,joyY=0,turnV=0;
 function solid(x,y){let xi=Math.floor(x),yi=Math.floor(y);return yi<0||yi>=level.length||xi<0||xi>=level[0].length||level[yi][xi]!=='0'}
 function move(dx,dy){let r=.22;if(!solid(player.x+dx+Math.sign(dx)*r,player.y))player.x+=dx;if(!solid(player.x,player.y+dy+Math.sign(dy)*r))player.y+=dy}
 
@@ -68,13 +68,68 @@ function makeHavanaFacade(){
 }
 const havanaFacade=makeHavanaFacade();
 
+
+// Original hand-inked facade texture sheets: all building types now illustrated.
+function illustratedFacade(base,accent,door,seed){
+ const c=document.createElement('canvas');c.width=320;c.height=512;const p=c.getContext('2d');
+ p.fillStyle='#292a32';p.fillRect(0,0,320,512);
+ p.fillStyle=base;p.fillRect(7,10,306,488);
+ // Irregular watercolor washes and peeling plaster (deterministic).
+ for(let i=0;i<1050;i++){const x=(i*97+seed*47+i*i*3)%304+8,y=(i*173+seed*31+i*i)%476+12;
+ p.fillStyle=i%3===0?'#593d3a1a':i%3===1?'#fff1c62a':'#201b2710';p.beginPath();p.ellipse(x,y,2+i%11,2+i%7,(i%9)*.3,0,7);p.fill();}
+ const rect=(x,y,w,h,color)=>{p.fillStyle=color;p.fillRect(x,y,w,h)};
+ rect(0,0,320,13,'#302b35');rect(4,14,312,15,accent);rect(0,31,320,7,'#45363a');
+ rect(0,238,320,13,accent);rect(0,254,320,8,'#3d3036');
+ for(const x of [6,156,306]){rect(x,40,11,447,accent);rect(x+10,40,5,447,'#352b3550')}
+ function arch(x,y,w,h,shutters){
+ p.fillStyle='#342c36';p.beginPath();p.moveTo(x,y+h);p.lineTo(x,y+w/2);p.arc(x+w/2,y+w/2,w/2,Math.PI,0);p.lineTo(x+w,y+h);p.fill();
+ p.fillStyle=door;p.beginPath();p.moveTo(x+9,y+h-7);p.lineTo(x+9,y+w/2+9);p.arc(x+w/2,y+w/2+9,w/2-9,Math.PI,0);p.lineTo(x+w-9,y+h-7);p.fill();
+ p.strokeStyle=accent;p.lineWidth=7;p.beginPath();p.arc(x+w/2,y+w/2,w/2+4,Math.PI,0);p.stroke();
+ rect(x+w/2-3,y+w/2+6,6,h-w/2-12,accent);
+ if(shutters){for(let j=0;j<6;j++){rect(x+11,y+w/2+21+j*16,w-22,2,'#1d30395c')}}
+ }
+ arch(25,67,115,155,true);arch(181,67,115,155,true);
+ // Decorative carved stone lintels and ironwork balconies.
+ for(let x=15;x<310;x+=13){rect(x,217,4,38,'#27242c');p.strokeStyle='#27242c';p.lineWidth=2;p.beginPath();p.arc(x+6,235,5,0,7);p.stroke()}
+ rect(12,214,295,6,'#29262e');rect(12,248,295,7,'#29262e');
+ for(let x=0;x<320;x+=38){p.strokeStyle=accent;p.lineWidth=3;p.beginPath();p.arc(x+12,42,9,0,Math.PI);p.stroke()}
+ arch(24,311,116,180,false);arch(180,311,116,180,false);
+ for(let x of [37,193]){for(let k=0;k<6;k++)rect(x+k*16,388,3,103,'#2b2b35a8')}
+ rect(0,490,320,22,'#46363b');rect(0,483,320,9,accent);
+ return c;
+}
+const facadeSheets={
+ '1':illustratedFacade('#a7a08e','#e6d0a1','#415965',1),
+ '2':illustratedFacade('#e8a77c','#ffe2ae','#416b70',2),
+ '3':illustratedFacade('#76b4b1','#e5d5a9','#294e65',3),
+ '4':illustratedFacade('#d88f9e','#f4d7ac','#4c6178',4),
+ '5':illustratedFacade('#b2a1c4','#f2d6aa','#425e5f',5)
+};
+function makeCartoonEnemy(){const c=document.createElement('canvas');c.width=160;c.height=240;const p=c.getContext('2d');
+ p.lineJoin='round';p.lineCap='round';const shape=(fill,draw)=>{p.beginPath();draw();p.fillStyle=fill;p.fill();p.lineWidth=6;p.strokeStyle='#25232a';p.stroke()};
+ // rubber-hose limbs, oversized shoes, original caricature face and hat
+ p.strokeStyle='#24232b';p.lineWidth=18;p.beginPath();p.moveTo(65,164);p.quadraticCurveTo(47,190,43,216);p.moveTo(99,164);p.quadraticCurveTo(116,191,120,216);p.stroke();
+ shape('#282934',()=>{p.ellipse(37,218,27,13,-.2,0,7)});shape('#282934',()=>{p.ellipse(124,218,27,13,.2,0,7)});
+ shape('#f3e3c5',()=>{p.ellipse(82,135,49,54,0,0,7)});
+ shape('#c84d3e',()=>{p.moveTo(54,96);p.lineTo(108,96);p.lineTo(103,150);p.lineTo(58,150);p.closePath()});
+ p.strokeStyle='#25232a';p.lineWidth=15;p.beginPath();p.moveTo(47,116);p.quadraticCurveTo(12,144,29,171);p.moveTo(117,116);p.quadraticCurveTo(150,142,131,171);p.stroke();
+ shape('#f2bd89',()=>{p.ellipse(83,68,42,43,0,0,7)});
+ shape('#f5dfac',()=>{p.ellipse(83,38,62,15,0,0,7)});shape('#f5dfac',()=>{p.moveTo(49,35);p.lineTo(57,5);p.quadraticCurveTo(84,-3,107,6);p.lineTo(118,35);p.closePath()});
+ p.fillStyle='#c84d3e';p.fillRect(48,26,68,8);
+ for(let x of [68,96]){shape('#fff9df',()=>{p.ellipse(x,66,12,17,0,0,7)});p.fillStyle='#29242b';p.beginPath();p.ellipse(x+3,68,4,8,0,0,7);p.fill()}
+ p.strokeStyle='#29242b';p.lineWidth=7;p.beginPath();p.moveTo(54,49);p.lineTo(75,52);p.moveTo(90,51);p.lineTo(111,47);p.stroke();
+ shape('#e4a474',()=>{p.ellipse(83,84,13,9,0,0,7)});
+ p.strokeStyle='#2c2427';p.lineWidth=7;p.beginPath();p.moveTo(65,98);p.quadraticCurveTo(82,110,100,96);p.stroke();
+ return c;
+}
+const enemyArt=makeCartoonEnemy();
 function render(){
  const w=canvas.width,h=canvas.height;
  // Sky and pavement are drawn separately from the raycast walls.
  const sky=ctx.createLinearGradient(0,0,0,h/2);sky.addColorStop(0,'#6caec5');sky.addColorStop(.75,'#d8d5ac');sky.addColorStop(1,'#f7cc92');ctx.fillStyle=sky;ctx.fillRect(0,0,w,h/2);
  // Painted cartoon clouds, gently drifting with camera direction.
  ctx.fillStyle='#fff2d5';for(let j=0;j<5;j++){const cx=((j*231-player.a*90)%(w+270)+(w+270))%(w+270)-90,cy=h*(.085+j%3*.06);ctx.beginPath();ctx.ellipse(cx,cy,58,13,0,0,Math.PI*2);ctx.ellipse(cx-25,cy-9,25,17,0,0,Math.PI*2);ctx.ellipse(cx+19,cy-13,34,22,0,0,Math.PI*2);ctx.fill()}
- const street=ctx.createLinearGradient(0,h/2,0,h);street.addColorStop(0,'#b99b7e');street.addColorStop(1,'#8e7565');ctx.fillStyle=street;ctx.fillRect(0,h/2,w,h/2);
+ const street=ctx.createLinearGradient(0,h/2,0,h);street.addColorStop(0,'#cbb99b');street.addColorStop(1,'#8e766a');ctx.fillStyle=street;ctx.fillRect(0,h/2,w,h/2);
  // Inked paving stones become smaller toward the horizon.
  ctx.strokeStyle='rgba(52,43,41,.27)';ctx.lineWidth=Math.max(1,w/500);for(let row=1;row<9;row++){const yy=h/2+(h/2)*(row/9)**1.6;ctx.beginPath();ctx.moveTo(0,yy);ctx.lineTo(w,yy);ctx.stroke();const spacing=20+row*24;for(let x=((row%2)*spacing/2);x<w;x+=spacing){ctx.beginPath();ctx.moveTo(x,yy);ctx.lineTo(w/2+(x-w/2)*1.13,Math.min(h,yy+12+row*2));ctx.stroke()}}
  
@@ -89,7 +144,7 @@ function render(){
    if(solid(mapX+.5,mapY+.5))break;
   }
   const distance=Math.max(.08,side===0?distX-ddx:distY-ddy),corrected=Math.max(.08,distance*Math.cos(angle-player.a));
-  depth[i]=corrected;const wallHeight=Math.min(h*3,h/(corrected*.78)),top=(h-wallHeight)/2;
+  depth[i]=corrected;const wallHeight=Math.min(h*3,h/(corrected*.59)),top=(h-wallHeight)/2;
   const tile=level[mapY]?.[mapX]||'1',hit=side===0?player.y+distance*dy:player.x+distance*dx,textureX=hit-Math.floor(hit);
   const colors={'1':[222,194,147],'2':[244,177,99],'3':[103,184,176],'4':[226,130,121],'5':[171,159,203]};
   const base=colors[tile]||colors['1'];
@@ -97,10 +152,10 @@ function render(){
   const shade=Math.max(.30,1-corrected*.055-(side?.12:0));
   const r=Math.floor(base[0]*shade),g=Math.floor(base[1]*shade),b=Math.floor(base[2]*shade);
   const x=Math.floor(i*colW),cw=Math.ceil(colW)+1;
-  if(tile==='3'){
-   const tx=Math.max(0,Math.min(255,Math.floor(textureX*256)));
-   ctx.drawImage(havanaFacade,tx,0,1,512,x,top,cw,wallHeight);
-   ctx.fillStyle=`rgba(32,31,41,${Math.min(.65,1-shade)})`;
+  {
+   const tx=Math.max(0,Math.min(319,Math.floor(textureX*320)));
+   ctx.drawImage(facadeSheets[tile]||facadeSheets['1'],tx,0,1,512,x,top,cw,wallHeight);
+   ctx.fillStyle=`rgba(31,27,35,${Math.min(.72,1-shade)})`;
    ctx.fillRect(x,top,cw,wallHeight);
    continue;
   }
@@ -146,13 +201,10 @@ function render(){
    const column=Math.min(columns-1,Math.floor(px/w*columns));
    if(front>depth[column]+.08)continue;
    const u=(px-left)/size;
-   const body=Math.sqrt(Math.max(0,1-Math.pow((u-.5)/.36,2)));
-   if(body<=0)continue;
-   ctx.fillStyle='#241d24';ctx.fillRect(px,top+size*(.32-.22*body),Math.ceil(w/columns)+1,size*.66*body);
-   const face=Math.sqrt(Math.max(0,1-Math.pow((u-.5)/.22,2)));
-   if(face>0){ctx.fillStyle='#d2a176';ctx.fillRect(px,top+size*(.24-.17*face),Math.ceil(w/columns)+1,size*.32*face)}
-   ctx.fillStyle=t.hp===1?'#c23d3d':'#4e6071';ctx.fillRect(px,top+size*(.48-.15*body),Math.ceil(w/columns)+1,size*.43*body);
-   ctx.fillStyle='#b52d36';ctx.fillRect(px,top+size*.07,Math.ceil(w/columns)+1,size*.025*(t.hp/3));
+   const srcX=Math.min(159,Math.max(0,Math.floor(u*160)));
+   ctx.drawImage(enemyArt,srcX,0,1,240,px,top,Math.ceil(w/columns)+1,size);
+   if(t.hp<3){ctx.fillStyle='#c23d3d';ctx.fillRect(px,top+size*.03,Math.ceil(w/columns)+1,size*.018*(t.hp/3));}
+
   }
  }
  if(performance.now()<invulnUntil){ctx.fillStyle='#f02a291b';ctx.fillRect(0,0,w,h)}
@@ -185,12 +237,12 @@ function render(){
   if(swing>.2){ctx.fillStyle=`rgba(255,217,107,${swing})`;ctx.beginPath();ctx.arc(0,-h*.48,22+swing*22,0,Math.PI*2);ctx.fill()}
  }else{
   ctx.translate(0,swing*h*.07);ctx.rotate(swing*.12);
-  ctx.fillStyle='#73492a';ctx.beginPath();ctx.roundRect(-61,-h*.16,122,h*.27,15);ctx.fill();
+  ctx.fillStyle='#754526';ctx.beginPath();ctx.roundRect(-70,-h*.17,140,h*.3,15);ctx.fill();ctx.strokeStyle='#32272a';ctx.lineWidth=7;ctx.stroke();
   ctx.strokeStyle='#bd9255';ctx.lineWidth=8;ctx.beginPath();ctx.moveTo(-52,-h*.11);ctx.lineTo(-52,h*.05);ctx.moveTo(52,-h*.11);ctx.lineTo(52,h*.05);ctx.stroke();
-  const iron=ctx.createLinearGradient(-80,0,80,0);iron.addColorStop(0,'#252c2e');iron.addColorStop(.5,'#6d7979');iron.addColorStop(1,'#242d32');ctx.fillStyle=iron;
+  const iron=ctx.createLinearGradient(-80,0,80,0);iron.addColorStop(0,'#61361f');iron.addColorStop(.5,'#bd7c42');iron.addColorStop(1,'#5c301e');ctx.fillStyle=iron;
   ctx.beginPath();ctx.moveTo(-49,-h*.16);ctx.lineTo(-75,-h*.43);ctx.lineTo(75,-h*.43);ctx.lineTo(49,-h*.16);ctx.closePath();ctx.fill();
-  ctx.fillStyle='#b99358';ctx.fillRect(-77,-h*.46,154,h*.04);ctx.fillStyle='#182025';ctx.beginPath();ctx.ellipse(0,-h*.43,62,15,0,0,Math.PI*2);ctx.fill();
-  ctx.strokeStyle='#d5a45b';ctx.lineWidth=5;ctx.stroke();
+  ctx.fillStyle='#3d2c2a';ctx.fillRect(-77,-h*.46,154,h*.04);ctx.strokeStyle='#e4bd76';ctx.lineWidth=8;for(let k of [-.34,-.25]){ctx.beginPath();ctx.moveTo(-63,-h*(-k));ctx.lineTo(63,-h*(-k));ctx.stroke()}ctx.fillStyle='#182025';ctx.beginPath();ctx.ellipse(0,-h*.43,62,15,0,0,Math.PI*2);ctx.fill();
+  ctx.strokeStyle='#f4d39a';ctx.lineWidth=7;ctx.stroke();
   if(swing>.2){ctx.fillStyle=`rgba(255,179,71,${swing*.7})`;ctx.beginPath();ctx.arc(0,-h*.46,25+swing*30,0,Math.PI*2);ctx.fill()}
  }
  ctx.restore();
